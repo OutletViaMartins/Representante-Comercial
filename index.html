@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -11,19 +11,20 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaga: Representante Comercial | Transforme sua Carreira</title>
+    <title>Oportunidad Exclusiva: Conviértete en Revendedora | Tu Futuro Te Espera</title>
     <link rel="icon" type="image/png" href="imagens/Logo Via Martins - png.png">
     <style>
         :root {
-            --primary: #2c5aa0;
-            --primary-dark: #1e3d72;
-            --secondary: #f8b739;
-            --accent: #e74c3c;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --success: #28a745;
-            --gray: #6c757d;
-            --light-gray: #e9ecef;
+            --verde-brasil: #009639;
+            --verde-escuro: #007A2F;
+            --amarelo-brasil: #FEDF00;
+            --amarelo-escuro: #E6C700;
+            --azul-brasil: #002776;
+            --azul-escuro: #001F5C;
+            --branco: #FFFFFF;
+            --cinza-claro: #F5F5F5;
+            --cinza-escuro: #333333;
+            --destaque: #FF6B00;
         }
         
         * {
@@ -34,9 +35,9 @@
         }
         
         body {
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
+            line-height: 1.7;
+            color: var(--cinza-escuro);
+            background: linear-gradient(135deg, var(--branco) 0%, var(--cinza-claro) 100%);
         }
         
         .container {
@@ -45,13 +46,25 @@
             margin: 0 auto;
             padding: 0 20px;
         }
+
+        .final-cta-container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         
         /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, var(--verde-brasil), var(--verde-escuro));
+            color: var(--branco);
+            padding: 15px 0;
+            box-shadow: 0 4px 20px rgba(0, 150, 57, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         
         .header-content {
@@ -61,68 +74,173 @@
         }
 
         .logo img {
-            height: 8rem;
-            background-color: white;
+            height: 6rem;
+            background-color: var(--branco);
             border-radius: 1rem;
             margin: 0;
+            padding: 5px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tagline {
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-align: right;
+            max-width: 300px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            color: var(--amarelo-brasil);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(44, 90, 160, 0.9), rgba(30, 61, 114, 0.9)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: 
+                linear-gradient(135deg, rgba(0, 150, 57, 0.85), rgba(0, 39, 118, 0.8)), 
+                url('https://images.unsplash.com/photo-1628645383220-0e7f57a0b267?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170');
             background-size: cover;
             background-position: center;
-            color: white;
-            padding: 100px 0;
+            background-attachment: fixed;
+            color: var(--branco);
+            padding: 120px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(254, 223, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 39, 118, 0.1) 0%, transparent 50%);
+            opacity: 0.6;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
         
         .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
+            font-size: 3.2rem;
+            margin-bottom: 25px;
             line-height: 1.2;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            font-weight: 800;
+        }
+        
+        .hero .highlight {
+            color: var(--amarelo-brasil);
+            background: linear-gradient(45deg, var(--amarelo-brasil), #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            position: relative;
         }
         
         .hero p {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            font-weight: 500;
+        }
+        
+        .urgent-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--destaque), #FF8C00);
+            color: var(--branco);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+            border: 2px solid var(--amarelo-brasil);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         
         .cta-button {
             display: inline-block;
-            background-color: var(--secondary);
-            color: var(--dark);
-            font-weight: 700;
-            font-size: 1.2rem;
-            padding: 15px 40px;
+            background: linear-gradient(45deg, var(--amarelo-brasil), var(--amarelo-escuro));
+            color: var(--azul-brasil);
+            font-weight: 800;
+            font-size: 1.3rem;
+            padding: 20px 50px;
             border-radius: 50px;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(254, 223, 0, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--branco);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-            background-color: #ffc947;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(254, 223, 0, 0.6);
+            color: var(--azul-escuro);
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
         }
         
         /* Pain Section */
         .pain-section {
-            padding: 80px 0;
-            background-color: white;
+            padding: 100px 0;
+            background: var(--branco);
+            position: relative;
+        }
+        
+        .pain-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--verde-brasil), var(--azul-brasil));
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
-            color: var(--primary);
+            margin-bottom: 60px;
+            color: var(--azul-brasil);
         }
         
         .section-title h2 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .section-title p {
+            color: var(--cinza-escuro);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         .pain-points {
@@ -133,69 +251,154 @@
         }
         
         .pain-card {
-            background-color: var(--light-gray);
-            border-radius: 10px;
-            padding: 30px;
-            width: 300px;
+            background: var(--branco);
+            border-radius: 15px;
+            padding: 40px 30px;
+            width: 320px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 39, 118, 0.1);
+            transition: all 0.4s ease;
+            border: 2px solid var(--cinza-claro);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--verde-brasil), var(--azul-brasil));
         }
         
         .pain-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 39, 118, 0.15);
+            border-color: var(--verde-brasil);
         }
         
         .pain-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--accent);
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: var(--azul-brasil);
+            background: linear-gradient(45deg, var(--cinza-claro), var(--branco));
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            box-shadow: 0 5px 15px rgba(0, 39, 118, 0.2);
+            border: 2px solid var(--amarelo-brasil);
+        }
+        
+        .pain-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--azul-brasil);
+            font-weight: 700;
         }
         
         /* Benefits Section */
         .benefits {
-            padding: 80px 0;
-            background-color: var(--light-gray);
+            padding: 100px 0;
+            background: linear-gradient(135deg, #E8F5E8 0%, #E3F2FD 100%);
+            position: relative;
+        }
+        
+        .benefits::before {
+            content: '💚';
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+        
+        .benefits::after {
+            content: '💛';
+            position: absolute;
+            bottom: 20px;
+            right: 5%;
+            font-size: 3rem;
+            opacity: 0.3;
         }
         
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
         }
         
         .benefit-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            background: var(--branco);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 35px rgba(0, 150, 57, 0.1);
+            transition: all 0.4s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+        
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            background: linear-gradient(45deg, var(--verde-brasil), var(--azul-brasil)) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
         }
         
         .benefit-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 150, 57, 0.2);
         }
         
         .benefit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--primary);
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, var(--verde-brasil), var(--azul-brasil));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
         .benefit-card h3 {
-            margin-bottom: 15px;
-            color: var(--primary);
+            margin-bottom: 20px;
+            color: var(--verde-brasil);
+            font-size: 1.6rem;
+            font-weight: 800;
+        }
+        
+        .benefit-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--cinza-escuro);
         }
         
         /* Requirements Section */
         .requirements {
-            padding: 80px 0;
-            background-color: white;
+            padding: 100px 0;
+            background: var(--branco);
         }
         
         .requirements-content {
             max-width: 800px;
             margin: 0 auto;
+            background: linear-gradient(135deg, var(--cinza-claro), var(--branco));
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--verde-brasil);
+            position: relative;
         }
         
         .requirements-list {
@@ -203,113 +406,209 @@
         }
         
         .requirements-list li {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--light-gray);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0, 150, 57, 0.2);
             display: flex;
             align-items: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--azul-brasil);
+        }
+        
+        .requirements-list li:last-child {
+            border-bottom: none;
         }
         
         .requirements-list li:before {
-            content: "✓";
-            color: var(--success);
+            content: "✅";
             font-weight: bold;
-            margin-right: 15px;
-            font-size: 1.2rem;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: var(--verde-brasil);
         }
         
         /* Testimonials */
         .testimonials {
-            padding: 80px 0;
-            background-color: var(--primary);
-            color: white;
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--azul-brasil), var(--azul-escuro));
+            color: var(--branco);
+            position: relative;
+            overflow: hidden;
         }
         
-        .testimonials .section-title
-        {
-            color: white;
+        .testimonials::before {
+            content: '"';
+            position: absolute;
+            top: 50px;
+            left: 10%;
+            font-size: 15rem;
+            color: rgba(254, 223, 0, 0.1);
+            font-family: serif;
+        }
+        
+        .testimonials .section-title {
+            color: var(--branco);
         }
 
         .testimonial-slider {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
+            z-index: 2;
         }
         
         .testimonial {
-            padding: 30px;
+            padding: 40px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(254, 223, 0, 0.3);
         }
         
         .testimonial-text {
             font-style: italic;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            line-height: 1.8;
         }
         
         .testimonial-author {
             font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--amarelo-brasil);
         }
         
         /* Final CTA */
         .final-cta {
-            padding: 100px 0;
+            padding: 120px 0;
             text-align: center;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
+            background: linear-gradient(135deg, var(--verde-brasil), var(--azul-brasil));
+            color: var(--branco);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(254, 223, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        }
+        
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
         }
         
         .final-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            font-weight: 800;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
         }
         
         .final-cta p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             max-width: 700px;
-            margin: 0 auto 40px;
+            margin: 0 auto 50px;
+            font-weight: 500;
         }
         
         .whatsapp-button {
             display: inline-block;
-            background-color: #25D366;
-            color: white;
-            font-weight: 700;
-            font-size: 1.3rem;
-            padding: 18px 50px;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: var(--branco);
+            font-weight: 800;
+            font-size: 1.4rem;
+            padding: 22px 60px;
             border-radius: 50px;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 350px;
-            margin: 0 auto;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--amarelo-brasil);
+        }
+        
+        .whatsapp-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.5s;
         }
         
         .whatsapp-button i {
-            margin-right: 10px;
-            font-size: 1.5rem;
+            margin-right: 15px;
+            font-size: 1.8rem;
         }
         
         .whatsapp-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-            background-color: #20b858;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-button:hover::before {
+            left: 100%;
+        }
+        
+        .counter {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-weight: 700;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--amarelo-brasil);
+            color: var(--amarelo-brasil);
         }
         
         /* Footer */
         footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 40px 0;
+            background: var(--azul-escuro);
+            color: var(--branco);
+            padding: 50px 0;
             text-align: center;
+        }
+        
+        footer p:first-child {
+            color: var(--amarelo-brasil);
+            font-weight: 600;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .logo img {
-                height: 6rem;
-                margin-right: 6rem;
+                height: 5rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .tagline {
+                text-align: center;
+                max-width: 100%;
+                font-size: 1rem;
+            }
+            
+            .hero {
+                padding: 80px 0;
+                background-attachment: scroll;
             }
             
             .hero h1 {
@@ -321,36 +620,46 @@
             }
             
             .section-title h2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             
             .benefits-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 25px;
             }
             
-            .benefit-card {
-                padding: 20px;
+            .benefit-card, .pain-card {
+                padding: 30px 20px;
             }
             
-            .benefit-icon {
-                font-size: 2rem;
+            .final-cta h2 {
+                font-size: 2.2rem;
             }
         }
         
         @media (max-width: 480px) {
             .benefits-grid {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 20px;
             }
             
-            .benefit-card {
-                padding: 15px;
+            .benefit-card, .pain-card {
+                padding: 25px 15px;
             }
             
-            .benefit-icon {
-                font-size: 1.8rem;
-                margin-bottom: 15px;
+            .pain-points {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pain-card {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .cta-button, .whatsapp-button {
+                padding: 18px 30px;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -367,7 +676,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo"><img src="imagens/Logo Via Martins - png.png"></div>
-                <div class="tagline">Conectando talentos a oportunidades de homens e mulheres</div>
+                <div class="tagline">💚 Oportunidad para Mujeres Emprendedoras 💛</div>
             </div>
         </div>
     </header>
@@ -375,9 +684,12 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Transforme sua Carreira como Representante Comercial</h1>
-            <p>Junte-se a uma equipe de sucesso com remuneração atrativa, benefícios exclusivos e oportunidades reais de crescimento</p>
-            <a href="#final-cta" class="cta-button">Quero me Candidatar</a>
+            <div class="hero-content">
+                <div class="urgent-badge">OPORTUNIDAD IMPERDIBLE - VAGAS LIMITADAS</div>
+                <h1>¡<span class="highlight">TRIPLICA</span> Tus Ingresos Desde Casa!</h1>
+                <p><strong>Descubre el sistema probado que ya transformó la vida de más de 2,000 mujeres emprendedoras.</strong> Gana hasta el 100% de ganancia sin inversión inicial.</p>
+                <a href="#final-cta" class="cta-button">¡QUIERO MI VAGA! 🚀</a>
+            </div>
         </div>
     </section>
 
@@ -385,30 +697,30 @@
     <section class="pain-section">
         <div class="container">
             <div class="section-title">
-                <h2>Você se identifica com alguma dessas situações?</h2>
-                <p>Muitos profissionais talentosos enfrentam esses desafios</p>
+                <h2>¿Estás Cansada de Esta Realidad?</h2>
+                <p>Miles de mujeres talentosas como tú enfrentan estos desafíos todos los días</p>
             </div>
             <div class="pain-points">
                 <div class="pain-card">
                     <div class="pain-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-calendar-times"></i>
                     </div>
-                    <h3>Estagnado na Carreira</h3>
-                    <p>Sentindo que atingiu seu limite sem perspectivas de crescimento?</p>
+                    <h3>Jornadas Interminables</h3>
+                    <p>Trabajas 10+ horas al día pero al final del mes no logras alcanzar tus metas financieras</p>
                 </div>
                 <div class="pain-card">
                     <div class="pain-icon">
-                        <i class="fas fa-money-bill-wave"></i>
+                        <i class="fas fa-piggy-bank"></i>
                     </div>
-                    <h3>Renda Limitada</h3>
-                    <p>Suas comissões não refletem seu esforço e talento?</p>
+                    <h3>Ingresos Estancados</h3>
+                    <p>Tu salario no ha crecido en años mientras los precios de todo suben constantemente</p>
                 </div>
                 <div class="pain-card">
                     <div class="pain-icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-heart-broken"></i>
                     </div>
-                    <h3>Falta de Suporte</h3>
-                    <p>Trabalha sozinho sem o apoio necessário para alcançar grandes resultados?</p>
+                    <h3>Falta de Tiempo</h3>
+                    <p>Entre el trabajo y las responsabilidades familiares, no tienes tiempo para ti misma</p>
                 </div>
             </div>
         </div>
@@ -418,37 +730,30 @@
     <section class="benefits">
         <div class="container">
             <div class="section-title">
-                <h2>O que oferecemos para transformar sua realidade</h2>
-                <p>Uma oportunidade completa para profissionais que buscam excelência</p>
+                <h2>Imagina Tu Vida Con...</h2>
+                <p>Esto es lo que nuestras revendedoras experimentan todos los días</p>
             </div>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <i class="fas fa-hand-holding-usd"></i>
+                        <i class="fas fa-money-bill-wave"></i>
                     </div>
-                    <h3>Remuneração Atraente</h3>
-                    <p>Ganhos proporcionais aos seus resultados<br>(ganhos acima de R$4.000,00)</p>
+                    <h3>Ganancias Explosivas</h3>
+                    <p><strong>Hasta 100% de ganancia por producto</strong> sin necesidad de inventario. Gana desde ₲5.000.000 mensuales trabajando medio tiempo.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Libertad de Horarios</h3>
+                    <p>Trabaja desde casa, elige tus horarios y <strong>dedica más tiempo a tu familia</strong> mientras generas ingresos consistentes.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>Capacitação Contínua</h3>
-                    <p>Auxílio da empresa para desenvolver suas habilidades de vendas</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Produtos de alto giro</h3>
-                    <p>Produtos que vão garantir seu sucesso</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Plano de Carreira</h3>
-                    <p>Oportunidades reais de crescimento dentro da empresa</p>
+                    <h3>Capacitación 360°</h3>
+                    <p>Te entregamos <strong> herramientas de alta rotación</strong> para que triunfes desde el primer día.</p>
                 </div>
             </div>
         </div>
@@ -458,16 +763,15 @@
     <section class="requirements">
         <div class="container">
             <div class="section-title">
-                <h2>Perfil que Procuramos</h2>
-                <p>Se você se identifica com estas características, temos uma oportunidade para você</p>
+                <h2>¿Eres la Candidata Ideal?</h2>
+                <p>Buscamos mujeres con estas características para unirse a nuestro equipo de élite</p>
             </div>
             <div class="requirements-content">
                 <ul class="requirements-list">
-                    <li>Experiência prévia em vendas ou atendimento ao cliente</li>
-                    <li>Veículo próprio</li>
-                    <li>Disponibilidade para viajar a outras cidades</li>
-                    <li>Vontade de aprender e se desenvolver continuamente</li>
-                    <li>Comprometimento com resultados e metas</li>
+                    <li>Experiencia previa en ventas</li>
+                    <li>Comprobante de domicilio</li>
+                    <li>Experiencia previa en ventas</li>
+                    <li>Informconf limpio</li>
                 </ul>
             </div>
         </div>
@@ -477,13 +781,13 @@
     <section class="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>Quem já faz parte da nossa equipe</h2>
-                <p>Conheça histórias de profissionais que transformaram suas carreiras conosco</p>
+                <h2>Ellas Ya Lo Lograron</h2>
+                <p style="color: var(--branco);">Mira lo que dicen nuestras revendedoras sobre esta oportunidad</p>
             </div>
             <div class="testimonial-slider">
                 <div class="testimonial">
-                    <p class="testimonial-text">"Há 3 anos estava estagnado em uma empresa sem perspectiva. Hoje, com o suporte e estrutura que recebo, minha renda triplicou e tenho clareza do meu crescimento profissional."</p>
-                    <p class="testimonial-author">- Carlos Silva, Representante Sênior</p>
+                    <p class="testimonial-text">"Antes ganaba ₲2.200.000 al mes trabajando 10 horas diarias. Hoy, gracias a Via Martins, genero ₲6.000.000 mensuales trabajando desde casa 4 horas al día. ¡He recuperado el tiempo con mis hijos y tengo la libertad que siempre soñé!"</p>
+                    <p class="testimonial-author">- Ana Rodríguez, Revendedora Independiente</p>
                 </div>
             </div>
         </div>
@@ -491,28 +795,31 @@
 
     <!-- Final CTA -->
     <section class="final-cta" id="final-cta">
-        <div class="container">
-            <h2>Está pronto para dar o próximo passo na sua carreira?</h2>
-            <p>Não perca esta oportunidade de fazer parte de uma equipe que valoriza seu talento e oferece as ferramentas para seu sucesso</p>
-            <a href="https://wa.me/5518996051366" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Candidatar-se via WhatsApp
-            </a>
-            <p style="margin-top: 20px; font-size: 0.9rem;">Vagas limitadas - Não perca esta chance!</p>
+        <div class="final-cta-container">
+            <div class="final-cta-content">
+                <h2>¡Tu Momento Es Ahora!</h2>
+                <p><strong>No dejes que esta oportunidad pase frente a tus ojos.</strong> Miles de mujeres ya cambiaron su realidad. ¿Serás la próxima?</p>
+                <a href="https://wa.link/dro1j5" class="whatsapp-button" target="_blank">
+                    <i class="fab fa-whatsapp"></i> ¡QUIERO COMENZAR AHORA!
+                </a>
+                <div class="counter">
+                    ⚠️ ÚLTIMAS VAGAS DISPONIBLES - NO TE QUEDES FUERA
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>© 2023 ViaMartins - Todos os direitos reservados</p>
-            <p>Transformando carreiras, construindo futuros</p>
+            <p>© 2023 ViaMartins - Transformando la Vida de Mujeres Emprendedoras</p>
+            <p>Tu futuro financiero comienza con una decisión. ¿Estás lista?</p>
         </div>
     </footer>
 
     <script>
-        // Adicione interatividade se necessário
         document.addEventListener('DOMContentLoaded', function() {
-            // Animação suave para links âncora
+            // Smooth scroll para links âncora
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -521,6 +828,16 @@
                     });
                 });
             });
+
+        });
+
+        // Efecto parallax suave
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
         });
     </script>
 </body>
